@@ -53,10 +53,12 @@ function loadMovieDetails(){
     const searchListMovies = searchList.querySelectorAll('.search-list-item');
     searchListMovies.forEach(movie => {
         movie.addEventListener('click', async () => {
+            // console.log(movie.dataset.id);
             searchList.classList.add('hide-search-list');
             movieSearchBox.value = "";
             const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=d7bfee7c`);
             const movieDetails = await result.json();
+            // console.log(movieDetails);
             displayMovieDetails(movieDetails);
         });
     });
