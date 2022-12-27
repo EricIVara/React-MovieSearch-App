@@ -10,7 +10,6 @@ async function loadMovies(searchTerm){
     const URL = `https://omdbapi.com/?s=${searchTerm}&page=1&apikey=d7bfee7c`;
     const res = await fetch(`${URL}`);
     const data = await res.json();
-    // console.log(data.Search);
     if(data.Response == "True") displayMovieList(data.Search);
 }
 
@@ -53,12 +52,11 @@ function loadMovieDetails(){
     const searchListMovies = searchList.querySelectorAll('.search-list-item');
     searchListMovies.forEach(movie => {
         movie.addEventListener('click', async () => {
-            // console.log(movie.dataset.id);
             searchList.classList.add('hide-search-list');
             movieSearchBox.value = "";
             const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=d7bfee7c`);
             const movieDetails = await result.json();
-            // console.log(movieDetails);
+            console.log(movieDetails);
             displayMovieDetails(movieDetails);
         });
     });
@@ -67,7 +65,7 @@ function loadMovieDetails(){
 function displayMovieDetails(details){
     resultGrid.innerHTML = `
     <div class = "movie-poster">
-        <img src = "${(details.Poster != "N/A") ? details.Poster : "image_not_found.png"}" alt = "movie poster">
+        <img src = "${(details.Poster != "N/A") ? details.Poster : "image_not_found.png.png"}" alt = "movie poster">
     </div>
     <div class = "movie-info">
         <h3 class = "movie-title">${details.Title}</h3>
