@@ -1,11 +1,21 @@
-.searchList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.search-list {
+  background-color: var(--light-dark-color);
+  max-height: 500px;
+  overflow-y: scroll;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 10;
 }
 
-.searchListItem {
+.search-list-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--dark-color);
+  color: #fff;
   cursor: pointer;
-  margin: 10px;
-  width: 200px;
+  transition: background-color 200ms ease;
+}
+
+.search-list-item:hover {
+  background-color: #1f1f1f;
 }

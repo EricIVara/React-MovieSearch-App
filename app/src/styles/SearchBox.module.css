@@ -1,9 +1,17 @@
-.searchContainer {
-  margin: 20px;
-  padding: 10px;
+.search-container {
+  background-color: var(--md-dark-color);
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.formControl {
-  width: 100%;
-  padding: 8px;
+.form-control {
+  width: 350px;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  color: var(--light-dark-color);
 }
