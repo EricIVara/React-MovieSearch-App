@@ -1,4 +1,6 @@
-.search-list {
+/* MovieList.module.css */
+
+.searchList {
   background-color: var(--light-dark-color);
   max-height: 500px;
   overflow-y: scroll;
@@ -8,7 +10,7 @@
   z-index: 10;
 }
 
-.search-list-item {
+.searchListItem {
   padding: 0.5rem;
   border-bottom: 1px solid var(--dark-color);
   color: #fff;
@@ -16,6 +18,6 @@
   transition: background-color 200ms ease;
 }
 
-.search-list-item:hover {
+.searchListItem:hover {
   background-color: #1f1f1f;
 }

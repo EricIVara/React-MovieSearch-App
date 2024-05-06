@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "./components/Navbar";
 import SearchBox from "./components/SearchBox";
 import MovieList from "./components/MovieList";
 import MovieDetails from "./components/MovieDetails";
@@ -33,11 +34,7 @@ function App() {
 
   return (
     <div className="wrapper">
-      <div className="logo">
-        <p>
-          Movie<span>Search</span>
-        </p>
-      </div>
+      <Navbar />
       <SearchBox onSearch={searchMovies} />
       <MovieList movies={movies} onSelectMovie={fetchMovieDetails} />
       {selectedMovie && <MovieDetails details={selectedMovie} />}

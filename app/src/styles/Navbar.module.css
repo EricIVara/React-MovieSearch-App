@@ -1,0 +1,18 @@
+/* Navbar.module.css */
+.navbar {
+  background-color: #333; /* Dark background */
+  padding: 10px 20px; /* Padding for aesthetic spacing */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out logo and other potential nav items */
+}
+
+.logo p {
+  color: white; /* White text color */
+  font-size: 24px; /* Large font size */
+  margin: 0; /* Remove default margin */
+}
+
+.logo span {
+  color: #e50914; /* Bright red color, similar to Netflix */
+}
