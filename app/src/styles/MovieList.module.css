@@ -1,0 +1,11 @@
+.searchList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.searchListItem {
+  cursor: pointer;
+  margin: 10px;
+  width: 200px;
+}

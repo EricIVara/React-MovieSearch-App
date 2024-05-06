@@ -1,23 +1,24 @@
 import React from "react";
+import styles from "../styles/MovieList.module.css";
 
 function MovieList({ movies, onSelectMovie }) {
   return (
-    <div className="search-list">
+    <div className={styles.searchList}>
       {movies.map((movie) => (
         <div
           key={movie.imdbID}
-          className="search-list-item"
+          className={styles.searchListItem}
           onClick={() => onSelectMovie(movie.imdbID)}
         >
-          <div className="search-item-thumbnail">
-            <img
-              src={
-                movie.Poster !== "N/A" ? movie.Poster : "image_not_found.png"
-              }
-              alt="Poster"
-            />
-          </div>
-          <div className="search-item-info">
+          <img
+            src={
+              movie.Poster !== "N/A"
+                ? movie.Poster
+                : "assets/image_not_found.png"
+            }
+            alt="Poster"
+          />
+          <div>
             <h3>{movie.Title}</h3>
             <p>{movie.Year}</p>
           </div>

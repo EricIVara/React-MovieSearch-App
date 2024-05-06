@@ -1,18 +1,20 @@
 import React from "react";
+import styles from "../styles/MovieDetails.module.css";
 
 function MovieDetails({ details }) {
   return (
-    <div className="movie-info">
-      <div className="movie-poster">
-        <img
-          src={
-            details.Poster !== "N/A" ? details.Poster : "image_not_found.png"
-          }
-          alt="movie poster"
-        />
-      </div>
-      <div className="movie-info">
-        <h3 className="movie-title">{details.Title}</h3>
+    <div className={styles.movieInfo}>
+      <img
+        src={
+          details.Poster !== "N/A"
+            ? details.Poster
+            : "assets/image_not_found.png"
+        }
+        alt="movie poster"
+        className={styles.moviePoster}
+      />
+      <div>
+        <h3>{details.Title}</h3>
         <p>Year: {details.Year}</p>
         <p>Genre: {details.Genre}</p>
         <p>Actors: {details.Actors}</p>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchBox from "./components/SearchBox";
 import MovieList from "./components/MovieList";
 import MovieDetails from "./components/MovieDetails";
+import "./styles/App.css";
 
 const API_KEY = "d7bfee7c"; // Remember to replace this with your actual API key!
 

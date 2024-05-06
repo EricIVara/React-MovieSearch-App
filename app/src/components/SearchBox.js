@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "../styles/SearchBox.module.css";
 
 function SearchBox({ onSearch }) {
   const [input, setInput] = useState("");
@@ -9,10 +10,10 @@ function SearchBox({ onSearch }) {
   };
 
   return (
-    <div className="search-container">
+    <div className={styles.searchContainer}>
       <input
         type="text"
-        className="form-control"
+        className={styles.formControl}
         placeholder="Search Movie Title ..."
         value={input}
         onChange={handleInput}

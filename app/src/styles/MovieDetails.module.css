@@ -1,0 +1,10 @@
+.movieInfo {
+  display: flex;
+  margin-top: 20px;
+}
+
+.moviePoster {
+  width: 150px;
+  height: 225px;
+  margin-right: 20px;
+}
